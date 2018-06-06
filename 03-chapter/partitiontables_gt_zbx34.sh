@@ -222,18 +222,18 @@ for i in $TABLES; do
 	cnt=$((cnt+1))
 	case $i in
 		history_log)
-			echo "ALTER TABLE $i DROP KEY history_log_2;" >>$SQL
-			echo "ALTER TABLE $i ADD KEY history_log_2(itemid, id);" >>$SQL
-			echo "ALTER TABLE $i DROP PRIMARY KEY ;" >>$SQL
-			id=`echo $IDS | cut -f$cnt -d" "`
-			echo "ALTER TABLE $i ADD KEY ${i}id ($id);" >>$SQL
+			#echo "ALTER TABLE $i DROP KEY history_log_2;" >>$SQL
+			#echo "ALTER TABLE $i ADD KEY history_log_2(itemid, id);" >>$SQL
+			#echo "ALTER TABLE $i DROP PRIMARY KEY ;" >>$SQL
+			#id=`echo $IDS | cut -f$cnt -d" "`
+			#echo "ALTER TABLE $i ADD KEY ${i}id ($id);" >>$SQL
 			;;
 		history_text)
-			echo "ALTER TABLE $i DROP KEY history_text_2;" >>$SQL
-			echo "ALTER TABLE $i ADD KEY history_text_2 (itemid, clock);" >>$SQL
-			echo "ALTER TABLE $i DROP PRIMARY KEY ;" >>$SQL
-			id=`echo $IDS | cut -f$cnt -d" "`
-			echo "ALTER TABLE $i ADD KEY ${i}id ($id);" >>$SQL
+			#echo "ALTER TABLE $i DROP KEY history_text_2;" >>$SQL
+			#echo "ALTER TABLE $i ADD KEY history_text_2 (itemid, clock);" >>$SQL
+			#echo "ALTER TABLE $i DROP PRIMARY KEY ;" >>$SQL
+			#id=`echo $IDS | cut -f$cnt -d" "`
+			#echo "ALTER TABLE $i ADD KEY ${i}id ($id);" >>$SQL
 			;;
 	esac
 done
